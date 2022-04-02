@@ -20,6 +20,11 @@
     a:hover .rate_scope, a:hover .label{
         color: black;
     }
+    .paging{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
     .recent-list{
         width: 100%;
         display: flex;
@@ -47,7 +52,7 @@
                 
             }
             img{
-                width: 250px;
+                width: 230px;
                 height: auto;
                 object-fit: cover;
                 border-radius: 3px;

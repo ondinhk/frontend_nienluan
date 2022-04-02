@@ -22,11 +22,11 @@
         }
         .left{
             width: 55%;
-            padding: 10px;
+            padding: 8px;
             img{
                 width: 100%;
-                height: auto;
-                object-fit: contain;
+                height: 683px;
+                object-fit: cover;
             }
         }
     
@@ -38,9 +38,9 @@
             justify-content: center;
             align-items: center;
             img{
-                width: 190px;
-                height: auto;
-                object-fit: contain;
+                width: 220px;
+                height: 200px;
+                object-fit: cover;
                 margin: 5px;
             }
         }
@@ -66,23 +66,22 @@
             margin-right: 100px;
         }
     }
+    h1{
+        font-size: 3rem;
+        font-weight: 500;
+        margin-top: 20px;
+        color: $btn-search;
+    }
     .block-comments{
-        margin-top: 50px;
-        h1{
-            font-size: 3rem;
-            font-weight: 500;
-            margin-bottom: 20px;
-            color: $btn-search;
-        }
+        margin-top: 20px;
         .comment_item{
             display: flex;
             justify-content: flex-start;
             align-items: center;
             font-size: 1.8rem;
-            padding: 10px;
-            margin: 5px;
+            padding: 20px;
+            margin: 20px;
             border-radius: 3px;
-            border-top: 0.5px solid rgb(180, 170, 170);
             .info_user{
                 width: 15%;
                 margin-left: 30px;
@@ -99,22 +98,23 @@
                 .content_text{
                     width: 80%;
                 }
+                .label{
+                    font-weight: 500;
+                    color: black;
+                }
                 .rate_scope{
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     flex-direction: column;
-                    .label{
-                        font-weight: 500;
-                        color: black;
-                    }
+                   
                     .scope{
                         display: flex;
                         justify-content: center;
                         align-items: center;
                         width: 50px;
                         height: 50px;
-                        background-color: aqua; 
+                        background-color: aquamarine; 
                         border-radius: 5px;  
                     }
                 }

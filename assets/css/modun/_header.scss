@@ -1,7 +1,11 @@
 header{
-    margin: 1% 2%;
+    height: 70px;
     .header_left{
         width: 100%;
+        padding: 10px 15px;
+        position: fixed;
+        background-color: #f8fcfcb9;
+        z-index: 999999;
         display: flex;
         justify-content: flex-start;
         align-items: center;

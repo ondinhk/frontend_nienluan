@@ -4,11 +4,15 @@ html {
 }
 
 header {
-  margin: 1% 2%;
+  height: 70px;
 }
 
 header .header_left {
   width: 100%;
+  padding: 10px 15px;
+  position: fixed;
+  background-color: #f8fcfcb9;
+  z-index: 999999;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -268,14 +272,14 @@ header .header_left .header-menu a:hover {
 
 .hotel_sing .hotel_img .left {
   width: 55%;
-  padding: 10px;
+  padding: 8px;
 }
 
 .hotel_sing .hotel_img .left img {
   width: 100%;
-  height: auto;
-  -o-object-fit: contain;
-     object-fit: contain;
+  height: 683px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .hotel_sing .hotel_img .right {
@@ -295,10 +299,10 @@ header .header_left .header-menu a:hover {
 }
 
 .hotel_sing .hotel_img .right img {
-  width: 190px;
-  height: auto;
-  -o-object-fit: contain;
-     object-fit: contain;
+  width: 220px;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
   margin: 5px;
 }
 
@@ -333,15 +337,15 @@ header .header_left .header-menu a:hover {
   margin-right: 100px;
 }
 
-.hotel_sing .block-comments {
-  margin-top: 50px;
-}
-
-.hotel_sing .block-comments h1 {
+.hotel_sing h1 {
   font-size: 3rem;
   font-weight: 500;
-  margin-bottom: 20px;
+  margin-top: 20px;
   color: #71b8b5;
+}
+
+.hotel_sing .block-comments {
+  margin-top: 20px;
 }
 
 .hotel_sing .block-comments .comment_item {
@@ -355,10 +359,9 @@ header .header_left .header-menu a:hover {
       -ms-flex-align: center;
           align-items: center;
   font-size: 1.8rem;
-  padding: 10px;
-  margin: 5px;
+  padding: 20px;
+  margin: 20px;
   border-radius: 3px;
-  border-top: 0.5px solid #b4aaaa;
 }
 
 .hotel_sing .block-comments .comment_item .info_user {
@@ -388,6 +391,11 @@ header .header_left .header-menu a:hover {
   width: 80%;
 }
 
+.hotel_sing .block-comments .comment_item .content .label {
+  font-weight: 500;
+  color: black;
+}
+
 .hotel_sing .block-comments .comment_item .content .rate_scope {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -404,11 +412,6 @@ header .header_left .header-menu a:hover {
           flex-direction: column;
 }
 
-.hotel_sing .block-comments .comment_item .content .rate_scope .label {
-  font-weight: 500;
-  color: black;
-}
-
 .hotel_sing .block-comments .comment_item .content .rate_scope .scope {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -421,7 +424,7 @@ header .header_left .header-menu a:hover {
           align-items: center;
   width: 50px;
   height: 50px;
-  background-color: aqua;
+  background-color: aquamarine;
   border-radius: 5px;
 }
 
@@ -451,6 +454,17 @@ header .header_left .header-menu a:hover {
 
 .recent a:hover .rate_scope, .recent a:hover .label {
   color: black;
+}
+
+.recent .paging {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .recent .recent-list {
@@ -511,7 +525,7 @@ header .header_left .header-menu a:hover {
 }
 
 .recent .recent-list .recent-item img {
-  width: 250px;
+  width: 230px;
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
