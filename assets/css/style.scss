@@ -1,0 +1,20 @@
+$text-color: #636e72;
+$btn-search: #71b8b5;
+// $btn-search: #82ccdd;
+$btn-hover-serch: rgb(153, 194, 197);
+html{
+    font-size: 62.5%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+@import '../css/modun/header';
+@import '../css/modun/slide_input';
+@import '../css/modun/top_destinations';
+@import '../css/modun/single_hotel';
+@import '../css/modun/recent';
+.my_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

@@ -1,0 +1,31 @@
+header{
+    margin: 1% 2%;
+    .header_left{
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        .header-logo{
+            width: 5%;
+            img{
+                width: 100%;
+                height: auto;
+            }
+            margin: 0 2% 0 0;
+        }
+        .header-menu{
+            width: 100%;
+            border-left: 1px solid #b2bec3;
+            font-size: 2rem;
+            padding: 0 1%;
+            a{
+                color: $text-color;
+                text-decoration: none;
+                margin-left: 5px;
+            }
+            a:hover{
+                color: #2d3436;
+            }
+        }
+    }
+}

@@ -1,0 +1,124 @@
+.center{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+.hotel_sing{
+    p{
+        color: rgb(71, 68, 68);
+    }
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    .hotel_img{
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        img{
+            border-radius: 5px;
+        }
+        .left{
+            width: 55%;
+            padding: 10px;
+            img{
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+            }
+        }
+    
+        .right{
+            width: 50%;
+            padding: 5px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            img{
+                width: 190px;
+                height: auto;
+                object-fit: contain;
+                margin: 5px;
+            }
+        }
+    }
+    .hotel_info
+    {   
+        margin-top: 10px;
+        .hotel_title{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .hotel_sing-name, .cost_hotel{
+            font-size: 4rem;
+            font-weight: 500;
+            color: $btn-search;
+        }
+        .des{
+            font-size: 1.8rem;
+            color: rgb(56, 56, 56);
+        }
+        .cost_hotel{
+            margin-right: 100px;
+        }
+    }
+    .block-comments{
+        margin-top: 50px;
+        h1{
+            font-size: 3rem;
+            font-weight: 500;
+            margin-bottom: 20px;
+            color: $btn-search;
+        }
+        .comment_item{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            font-size: 1.8rem;
+            padding: 10px;
+            margin: 5px;
+            border-radius: 3px;
+            border-top: 0.5px solid rgb(180, 170, 170);
+            .info_user{
+                width: 15%;
+                margin-left: 30px;
+                .name_user{
+                    font-size: 2rem;
+                    font-weight: 500;
+                }
+            }
+            .content{
+                width: 80%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .content_text{
+                    width: 80%;
+                }
+                .rate_scope{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    .label{
+                        font-weight: 500;
+                        color: black;
+                    }
+                    .scope{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 50px;
+                        height: 50px;
+                        background-color: aqua; 
+                        border-radius: 5px;  
+                    }
+                }
+            }
+        }
+    }
+}
