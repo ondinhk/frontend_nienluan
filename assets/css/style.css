@@ -340,8 +340,49 @@ header .header_left .header-menu a:hover {
 .hotel_sing h1 {
   font-size: 3rem;
   font-weight: 500;
-  margin-top: 20px;
   color: #71b8b5;
+}
+
+.hotel_sing .title_comment {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.hotel_sing .title_comment a {
+  text-decoration: none;
+}
+
+.hotel_sing .title_comment .change_page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 2rem;
+}
+
+.hotel_sing .title_comment .change_page .button-next {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.hotel_sing .title_comment .change_page a {
+  margin-right: 20px;
+}
+
+.hotel_sing .title_comment .change_page p {
+  text-align: center;
 }
 
 .hotel_sing .block-comments {

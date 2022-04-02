@@ -20,7 +20,7 @@ function nextPage() {
     else {
         state.page++;
         getAllHouse(renderHTML)
-        document.getElementById('#search').scrollIntoView();
+        document.querySelector('#search').scrollIntoView();
     }
 }
 

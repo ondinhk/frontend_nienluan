@@ -69,8 +69,30 @@
     h1{
         font-size: 3rem;
         font-weight: 500;
-        margin-top: 20px;
         color: $btn-search;
+    }
+    .title_comment{
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        a{
+            text-decoration: none;
+        }
+        .change_page{
+            display: flex;
+            flex-direction: column;
+            font-size: 2rem;
+            .button-next{
+                display: flex;
+            }
+            a{
+                margin-right: 20px;
+            }
+            p{
+                text-align: center;
+            }
+        }
     }
     .block-comments{
         margin-top: 20px;
