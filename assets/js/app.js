@@ -2,11 +2,17 @@ var state = {
     'page': 1,
     'rows': 5
 }
-let container = document.getElementById('container');
+// DOM const
+const container = document.getElementById('container');
+const input_search = document.getElementById('input_search');
+const result_max = document.getElementById('result_search');
+
+
 async function getAllHouse(callback) {
     const url = "http://localhost:8080/api/house/dalat/all";
     const data = await fetch(url, {
         mode: 'cors',
+        cache: "force-cache",
         headers: {
             'Content-Type': 'application/json',
             "Access-Control-Allow-Origin": "*",
@@ -35,45 +41,47 @@ function prevPage() {
 }
 function renderHTML(input) {
     let root = document.getElementById('root');
-    let container = document.getElementById('container');
-    let numberHouse = document.getElementById('numberHouse');
+    // Get data
     let dataJson = input.data[0]
-    // Create data
+    // Render number house
+    let numberHouse = document.getElementById('numberHouse');
+    number = dataJson.length;
+    numberHouse.innerHTML = number;
+    // Create state data
     let data = createState(dataJson, state)
-    // Update Page
-    let page = document.getElementById('page')
-    numberPage = state.page + "/" + data.page;
-    page.innerHTML = numberPage;
-    // Render
+    // Html data
     var html = data.querySet.map(function (item) {
-        // console.log(item)
         if (item.rate === "Chưa có đánh giá") {
             item.rate = 0;
         }
         return `<a href="javascript:showHotel(${item.idHouse})"class="recent-item shadow">
         <div class="item_info">
-            <img src="${item.image}" alt="">
-            <div class="info">
+        <img src="${item.image}" alt="">
+        <div class="info">
                 <p class="name_hotel">${item.title} </p>
                 <p class="description">${item.description}</p>
                 <p class="text_small">${item.distance}</p>
                 <p class="cost_hotel">${item.cost}</p>
-            </div>
-        </div>
+                </div>
+                </div>
         <div class="rate">
-            <p class="label">${item.label_rate}</p>
-            <div class="rate_scope">
-                <p>${item.rate}</p>
-            </div>
-            <p class="text_small">${item.quanlityComment}</p>
+        <p class="label">${item.label_rate}</p>
+        <div class="rate_scope">
+        <p>${item.rate}</p>
+        </div>
+        <p class="text_small">${item.quanlityComment}</p>
 
             <h3 class="more_info">Xem thêm</h3>
-        </div>
-    </a>`
+            </div>
+            </a>`
     });
-    number = input.data[0].length;
+    // Render root
+    result_max.innerHTML = ""
     root.innerHTML = html.join("");
-    numberHouse.innerHTML = number;
+    // Render paging 
+    let page = document.getElementById('page')
+    numberPage = state.page + "/" + data.page;
+    page.innerHTML = numberPage;
 }
 
 function createState(input, state) {
@@ -83,7 +91,7 @@ function createState(input, state) {
 function pagination(querySet, page, rows) {
     var trimStart = (page - 1) * rows;
     var trimEnd = trimStart + rows;
-
+    // Get data from start to end
     var trimData = querySet.slice(trimStart, trimEnd);
     var pages = Math.ceil(querySet.length / rows);
     return {
@@ -92,6 +100,7 @@ function pagination(querySet, page, rows) {
     }
 }
 function app() {
+    // Create state when reload page
     state.page = 1;
     getAllHouse(renderHTML);
 }

@@ -106,13 +106,17 @@ header .header_left .header-menu a:hover {
   position: relative;
 }
 
+.slide .slide_input .input_form p {
+  font-size: 3rem;
+}
+
 .slide .slide_input .input_form input {
   width: 80%;
   height: 20%;
   border: none;
   border-radius: 10px;
   font-size: 3rem;
-  padding-left: 50px;
+  padding-left: 20px;
 }
 
 .slide .slide_input .input_form input:focus {

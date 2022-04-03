@@ -84,7 +84,6 @@ function renderImage(data) {
 }
 function renderContainer(data, numberComments, comment_pages) {
     // Container
-    let container = document.getElementById('container');
     let info = data.info[0]
     let images = data.image;
     container.innerHTML = `<div class="center">
@@ -125,7 +124,12 @@ function renderContainer(data, numberComments, comment_pages) {
     let page_present = document.getElementById('page_present');
     let page_max = document.getElementById('page_max')
     // Index page
-    let idx_comment = state.page * state.rows;
+    let idx_comment;
+    if (numberComments < 5) {
+        idx_comment = numberComments;
+    } else {
+        idx_comment = state.page * state.rows;
+    }
     // Update page
     page_max.innerText = number_comment_string;
     page_present.innerText = idx_comment
