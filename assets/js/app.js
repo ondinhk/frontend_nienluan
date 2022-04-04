@@ -36,7 +36,7 @@ function prevPage() {
     else {
         state.page--;
         getAllHouse(renderHTML)
-        document.getElementById('#search').scrollIntoView();
+        document.querySelector('#search').scrollIntoView();
     }
 }
 function renderHTML(input) {
@@ -59,11 +59,11 @@ function renderHTML(input) {
         <img src="${item.image}" alt="">
         <div class="info">
                 <p class="name_hotel">${item.title} </p>
-                <p class="description">${item.description}</p>
-                <p class="text_small">${item.distance}</p>
+                <p class="description">${item.description[0].des_text}</p>
+                <p class="text_small address">${item.description[0].address} <br> ${item.distance}</p>
                 <p class="cost_hotel">${item.cost}</p>
-                </div>
-                </div>
+        </div>
+        </div>
         <div class="rate">
         <p class="label">${item.label_rate}</p>
         <div class="rate_scope">
@@ -73,17 +73,28 @@ function renderHTML(input) {
 
             <h3 class="more_info">Xem thêm</h3>
             </div>
-            </a>`
+        </a>`
     });
+    // Render paging
+    renderPaging(data);
     // Render root
-    result_max.innerHTML = ""
+    result_max.innerHTML = ``
     root.innerHTML = html.join("");
-    // Render paging 
+
+}
+function renderPaging(data) {
+    // Render paging
+    let paging = document.getElementById('pagination')
+    let paging_html = `<a href="javascript:prevPage()">Prev</a>
+    <p>Page: <span id="page"></span></p>
+    <a href="javascript:nextPage(${data.page})">Next</a>`;
+    paging.innerHTML = paging_html
+
+    // Render number page current 
     let page = document.getElementById('page')
     numberPage = state.page + "/" + data.page;
     page.innerHTML = numberPage;
 }
-
 function createState(input, state) {
     var dataOutput = pagination(input, state.page, state.rows);
     return dataOutput;

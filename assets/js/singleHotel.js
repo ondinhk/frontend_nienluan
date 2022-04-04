@@ -6,6 +6,7 @@ async function getHouseById(idHouse, callback) {
     const url = "http://localhost:8080/api/house/dalat/" + idHouse;
     const data = await fetch(url, {
         mode: 'cors',
+        cache: "force-cache",
         headers: {
             'Content-Type': 'application/json',
             "Access-Control-Allow-Origin": "*",
@@ -97,11 +98,11 @@ function renderContainer(data, numberComments, comment_pages) {
         </div>
         <div class="hotel_info">
             <div class="hotel_title">
-                <p class=" hotel_sing-name">${info.title} <span class="text_small">${info.distance}</span>
-                </p>
+                <p class=" hotel_sing-name">${info.title}</p>
                 <p class="cost_hotel">${info.cost}</p>
             </div>
-            <p class="des">${info.description}</p>
+            <p><span class="text_small address"> ${info.description[0].address}</span> <span class="text_small">(${info.distance})</span>  </p>
+            <p class="des">${info.description[0].des_text}</p>
             <p class="des">Link booking: <a href="${info.linkBooking}">${info.linkBooking}</a> </p>
         </div>
         <div class="title_comment" id="number_comment" data-comments=${numberComments} data-pages=${comment_pages}>
