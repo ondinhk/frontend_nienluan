@@ -44,46 +44,6 @@
                 </div>
             </div>
         </div>
-        <!-- <div class="top_destinations">
-            <p>Các điểm đến thu hút nhất Việt Nam</p>
-            <div class="top_destinations_list">
-                <a href="#" class="top_destinations_list-item">
-                    <img src="./assets/img/bege31ewtyqoh3koop5e.webp" alt="">
-                    <p class="name" id="top-name">HCM</p>
-                    <p class="des">200 cho</p>
-                </a>
-                <a href="#" class="top_destinations_list-item">
-                    <img src="./assets/img/qij6cdhlwescboqpkhaz.webp" alt="">
-                    <p class="name" id="top-name">DaLat</p>
-                    <p class="des" id="top-des">300 cho</p>
-                </a>
-                <a href="#" class="top_destinations_list-item">
-                    <img src="./assets/img/vem5ucaczmg7psukyqth.webp" alt="">
-                    <p class="name" id="top-name">DaLat</p>
-                    <p class="des" id="top-des">300 cho</p>
-                </a>
-                <a href="#" class="top_destinations_list-item">
-                    <img src="./assets/img/bege31ewtyqoh3koop5e.webp" alt="">
-                    <p class="name" id="top-name">DaLat</p>
-                    <p class="des" id="top-des">300 cho</p>
-                </a>
-                <a href="#" class="top_destinations_list-item">
-                    <img src="./assets/img/ug31plomb6sr04fajhpc.webp" alt="">
-                    <p class="name" id="top-name">DaLat</p>
-                    <p class="des" id="top-des">300 cho</p>
-                </a>
-                <a href="#" class="top_destinations_list-item">
-                    <img src="./assets/img/image-from-rawpixel-id-3337895-jpeg.jpg" alt="">
-                    <p class="name" id="top-name">DaLat</p>
-                    <p class="des" id="top-des">300 cho</p>
-                </a>
-                <a href="#" class="top_destinations_list-item">
-                    <img src="./assets/img/qij6cdhlwescboqpkhaz.webp" alt="">
-                    <p class="name" id="top-name">DaLat</p>
-                    <p class="des" id="top-des">300 cho</p>
-                </a>
-            </div>
-        </div> -->
         <div class="recent">
             <p id="result_search"></p>
             <div class="recent-list" id="root">
@@ -124,27 +84,30 @@
     <script src="./assets/js/singleHotel.js"></script>
     <script src="./assets/js/app.js"></script>
     <!-- Chat bot -->
-    <!-- <script>!(function () {
+    <script>!(function () {
             let e = document.createElement("script"),
                 t = document.head || document.getElementsByTagName("head")[0];
             (e.src =
                 "https://cdn.jsdelivr.net/npm/rasa-webchat@1.0.1/lib/index.js"),
-                // Replace 1.x.x with the version that you want
                 (e.async = !0),
                 (e.onload = () => {
                     window.WebChat.default(
                         {
+                            initPayload: '/hello path 1',
                             customData: { language: "en" },
                             socketUrl: "http://localhost:5005/",
                             // add other props here
-                            title: "Chatbot tư vấn",
+                            title: "Chatbot",
+                            params: {
+                                storage: "session"
+                            }
                         },
                         null
                     );
                 }),
                 t.insertBefore(e, t.firstChild);
         })();
-    </script> -->
+    </script>
 </body>
 
 </html>
