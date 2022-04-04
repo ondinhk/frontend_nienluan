@@ -23,11 +23,12 @@ function filterData(data) {
     renderSearch(result);
 }
 function renderSearch(input) {
+    // Nếu có kết quả
     if (input.length > 0) {
         // Create state
         let data = createState(input, state)
         // Get number max result
-        let maxHotel = data.querySet.length;
+        let maxHotel = input.length;
         // Html Hotel
         let html = data.querySet.map(function (item) {
             // console.log(item)
@@ -38,11 +39,11 @@ function renderSearch(input) {
         <div class="item_info">
             <img src="${item.image}" alt="">
             <div class="info">
-                <p class="name_hotel">${item.title} </p>
-                <p class="description">${item.description}</p>
-                <p class="text_small">${item.distance}</p>
-                <p class="cost_hotel">${item.cost}</p>
-            </div>
+            <p class="name_hotel">${item.title} </p>
+            <p class="description">${item.description[0].des_text}</p>
+            <p class="text_small">${item.description[0].address} <br> ${item.distance}</p>
+            <p class="cost_hotel">${item.cost}</p>
+        </div>
         </div>
         <div class="rate">
             <p class="label">${item.label_rate}</p>
@@ -56,17 +57,7 @@ function renderSearch(input) {
     </a>`
         });
         // Render paging
-        let paging = document.getElementById('pagination')
-        let paging_html = `<a href="javascript:prevPageSearch()">Prev</a>
-            <p>Page: <span id="page"></span></p>
-            <a href="javascript:nextPageSearch(${state.page})">Next</a>`;
-        paging.innerHTML = paging_html
-        // Update Page
-        let page = document.getElementById('page')
-        numberPage = state.page + "/" + data.page;
-        page.innerHTML = numberPage;
-        // Render number max result
-        result_max.innerText = "Có " + maxHotel + " kết quả";
+        renderPagingSearch(data, maxHotel);
         // Render hotel
         root.innerHTML = html.join("")
     } else {
@@ -74,6 +65,20 @@ function renderSearch(input) {
         let paging = document.getElementById('pagination')
         paging.innerHTML = "Không tìm thấy kết quả"
     }
+}
+function renderPagingSearch(data, maxHotel) {
+    // Render paging
+    let paging = document.getElementById('pagination')
+    let paging_html = `<a href="javascript:prevPageSearch()">Prev</a>
+    <p>Page: <span id="page"></span></p>
+    <a href="javascript:nextPageSearch(${data.page})">Next</a>`;
+    paging.innerHTML = paging_html
+    // Update Page
+    let page = document.getElementById('page')
+    numberPage = state.page + "/" + data.page;
+    page.innerHTML = numberPage;
+    // Render number max result
+    result_max.innerText = "Có " + maxHotel + " kết quả";
 }
 function nextPageSearch(maxPage) {
     if (state.page == maxPage)
@@ -91,6 +96,6 @@ function prevPageSearch() {
     else {
         state.page--;
         searchHotel()
-        document.getElementById('#search').scrollIntoView();
+        document.querySelector('#search').scrollIntoView();
     }
 }

@@ -4,9 +4,14 @@
     justify-content:center;
     align-items: center;
 }
+
 .hotel_sing{
     p{
-        color: rgb(71, 68, 68);
+        color: rgb(26, 25, 25);
+    }
+    .address{
+        font-size: 2rem !important;
+        color: black;
     }
     width: 80%;
     display: flex;
@@ -55,12 +60,12 @@
         }
         .hotel_sing-name, .cost_hotel{
             font-size: 4rem;
-            font-weight: 500;
+            font-weight: 700;
             color: $btn-search;
         }
         .des{
             font-size: 1.8rem;
-            color: rgb(56, 56, 56);
+            color: rgb(26, 25, 25);
         }
         .cost_hotel{
             margin-right: 100px;
@@ -68,7 +73,7 @@
     }
     h1{
         font-size: 3rem;
-        font-weight: 500;
+        font-weight: 700;
         color: $btn-search;
     }
     .title_comment{
@@ -109,7 +114,7 @@
                 margin-left: 30px;
                 .name_user{
                     font-size: 2rem;
-                    font-weight: 500;
+                    font-weight: 700;
                 }
             }
             .content{
@@ -121,7 +126,7 @@
                     width: 80%;
                 }
                 .label{
-                    font-weight: 500;
+                    font-weight: 700;
                     color: black;
                 }
                 .rate_scope{

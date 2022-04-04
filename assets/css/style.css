@@ -1,6 +1,10 @@
 html {
   font-size: 62.5%;
-  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  background-color: #f4fcd92d;
+  font-family: 'Lato', sans-serif;
 }
 
 header {
@@ -254,7 +258,12 @@ header .header_left .header-menu a:hover {
 }
 
 .hotel_sing p {
-  color: #474444;
+  color: #1a1919;
+}
+
+.hotel_sing .address {
+  font-size: 2rem !important;
+  color: black;
 }
 
 .hotel_sing .hotel_img {
@@ -328,13 +337,13 @@ header .header_left .header-menu a:hover {
 
 .hotel_sing .hotel_info .hotel_sing-name, .hotel_sing .hotel_info .cost_hotel {
   font-size: 4rem;
-  font-weight: 500;
+  font-weight: 700;
   color: #71b8b5;
 }
 
 .hotel_sing .hotel_info .des {
   font-size: 1.8rem;
-  color: #383838;
+  color: #1a1919;
 }
 
 .hotel_sing .hotel_info .cost_hotel {
@@ -343,7 +352,7 @@ header .header_left .header-menu a:hover {
 
 .hotel_sing h1 {
   font-size: 3rem;
-  font-weight: 500;
+  font-weight: 700;
   color: #71b8b5;
 }
 
@@ -416,7 +425,7 @@ header .header_left .header-menu a:hover {
 
 .hotel_sing .block-comments .comment_item .info_user .name_user {
   font-size: 2rem;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .hotel_sing .block-comments .comment_item .content {
@@ -437,7 +446,7 @@ header .header_left .header-menu a:hover {
 }
 
 .hotel_sing .block-comments .comment_item .content .label {
-  font-weight: 500;
+  font-weight: 700;
   color: black;
 }
 
@@ -471,11 +480,6 @@ header .header_left .header-menu a:hover {
   height: 50px;
   background-color: aquamarine;
   border-radius: 5px;
-}
-
-.text_small {
-  color: #636e72;
-  font-size: 1.5rem !important;
 }
 
 .recent {
@@ -585,7 +589,7 @@ header .header_left .header-menu a:hover {
 
 .recent .recent-list .recent-item .name_hotel {
   font-size: 2.3rem;
-  font-weight: 500;
+  font-weight: 700;
   height: 50px;
 }
 
@@ -675,5 +679,10 @@ header .header_left .header-menu a:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.text_small {
+  color: #636e72;
+  font-size: 1.7rem !important;
 }
 /*# sourceMappingURL=style.css.map */
