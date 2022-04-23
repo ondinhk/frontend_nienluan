@@ -1,6 +1,7 @@
-header{
-    height: 70px;
-    .header_left{
+header {
+    height: 68px;
+
+    .header_left {
         width: 100%;
         padding: 10px 15px;
         position: fixed;
@@ -9,26 +10,32 @@ header{
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        .header-logo{
+
+        .header-logo {
             width: 5%;
-            img{
+
+            img {
                 width: 100%;
                 height: auto;
             }
+
             margin: 0 2% 0 0;
         }
-        .header-menu{
+
+        .header-menu {
             width: 100%;
-            border-left: 1px solid #b2bec3;
             font-size: 2rem;
             padding: 0 1%;
-            a{
-                color: $text-color;
-                text-decoration: none;
-                margin-left: 5px;
-            }
-            a:hover{
+            border-left: 1px solid #b2bec3;
+
+            a {
                 color: #2d3436;
+                text-decoration: none;
+                margin-right: 20px;
+            }
+
+            a:hover {
+                color: $text-color;
             }
         }
     }

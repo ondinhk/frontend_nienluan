@@ -1,0 +1,33 @@
+.container_map {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    #map {
+        width: 70%;
+    }
+
+    .result {
+        width: 30%;
+
+        .form {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            input {
+                width: 70%;
+                height: 35px;
+                margin: 20px;
+                font-size: 1.8rem;
+            }
+
+            button {
+                width: 100px;
+                height: 40px;
+                font-size: 2rem;
+            }
+        }
+    }
+
+}

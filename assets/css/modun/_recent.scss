@@ -1,73 +1,88 @@
-.recent{
+.recent {
     width: 90%;
     margin-top: 100px;
     text-align: center;
-    p{
+
+    p {
         font-size: 2.5rem;
         // margin-bottom: 50px;
     }
-    a{
+
+    a {
         text-decoration: none;
         color: black;
     }
-    a:hover{
+
+    a:hover {
         color: $btn-search;
     }
-    a:hover .rate_scope, a:hover .label{
+
+    a:hover .rate_scope,
+    a:hover .label {
         color: black;
     }
-    .paging{
+
+    .paging {
         display: flex;
         justify-content: space-around;
         align-items: center;
     }
-    .recent-list{
+
+    .recent-list {
         width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
-        .recent-item{
+
+        .recent-item {
             display: flex;
             justify-content: space-between;
             align-items: center;
             width: 60%;
             padding: 5px;
             margin: 20px 0px;
-            .item_info{
+
+            .item_info {
                 display: flex;
             }
-            .info{
+
+            .info {
                 width: 70%;
                 padding: 5px 20px;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-around;
                 align-items: flex-start;
-                
+
             }
-            img{
+
+            img {
                 width: 230px;
                 height: auto;
                 object-fit: cover;
                 border-radius: 3px;
             }
-            p{
+
+            p {
                 text-align: start;
                 margin: 0;
                 padding: 0;
             }
-            .name_hotel{
+
+            .name_hotel {
                 font-size: 2.3rem;
                 font-weight: 700;
                 height: 50px;
+
                 // color: $btn-search;
-                .distance{
+                .distance {
                     font-size: 1.5rem;
                 }
             }
-            .description{
+
+            .description {
                 font-size: 1.7rem;
                 width: 600px;
                 margin-bottom: 10px;
@@ -77,24 +92,29 @@
                 text-overflow: ellipsis;
                 word-break: inherit;
             }
-            .cost_hotel{
+
+            .cost_hotel {
                 color: black;
                 margin-top: 10px;
                 font-size: 2.3rem;
             }
-            .more_info{
+
+            .more_info {
                 margin-top: 20px;
             }
-            .rate{
+
+            .rate {
                 width: 500px;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
                 align-items: center;
-                .label{
+
+                .label {
                     font-size: 1.8rem;
                 }
-                .rate_scope{
+
+                .rate_scope {
                     width: 50px;
                     height: 50px;
                     margin: 5px 0px;
@@ -104,13 +124,15 @@
                     justify-content: center;
                     align-items: center;
                 }
-                .number_rate{
+
+                .number_rate {
                     counter-reset: $text-color;
                 }
             }
         }
-        .recent-item:hover{
+
+        .recent-item:hover {
             transform: scale(1);
-         }
+        }
     }
 }

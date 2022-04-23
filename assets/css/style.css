@@ -8,7 +8,7 @@ body {
 }
 
 header {
-  height: 70px;
+  height: 68px;
 }
 
 header .header_left {
@@ -40,19 +40,19 @@ header .header_left .header-logo img {
 
 header .header_left .header-menu {
   width: 100%;
-  border-left: 1px solid #b2bec3;
   font-size: 2rem;
   padding: 0 1%;
+  border-left: 1px solid #b2bec3;
 }
 
 header .header_left .header-menu a {
-  color: #636e72;
+  color: #2d3436;
   text-decoration: none;
-  margin-left: 5px;
+  margin-right: 20px;
 }
 
 header .header_left .header-menu a:hover {
-  color: #2d3436;
+  color: #636e72;
 }
 
 .slide {
@@ -501,7 +501,8 @@ header .header_left .header-menu a:hover {
   color: #71b8b5;
 }
 
-.recent a:hover .rate_scope, .recent a:hover .label {
+.recent a:hover .rate_scope,
+.recent a:hover .label {
   color: black;
 }
 
@@ -663,6 +664,50 @@ header .header_left .header-menu a:hover {
 .recent .recent-list .recent-item:hover {
   -webkit-transform: scale(1);
           transform: scale(1);
+}
+
+.container_map {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.container_map #map {
+  width: 70%;
+}
+
+.container_map .result {
+  width: 30%;
+}
+
+.container_map .result .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container_map .result .form input {
+  width: 70%;
+  height: 35px;
+  margin: 20px;
+  font-size: 1.8rem;
+}
+
+.container_map .result .form button {
+  width: 100px;
+  height: 40px;
+  font-size: 2rem;
 }
 
 .my_container {

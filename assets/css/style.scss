@@ -2,10 +2,12 @@ $text-color: #636e72;
 $btn-search: #71b8b5;
 // $btn-search: #82ccdd;
 $btn-hover-serch: rgb(153, 194, 197);
-html{
+
+html {
     font-size: 62.5%;
 }
-body{
+
+body {
     background-color: #f4fcd92d;
     // font-family: 'Times New Roman', Times, serif;
     font-family: 'Lato', sans-serif;
@@ -16,13 +18,16 @@ body{
 @import '../css/modun/top_destinations';
 @import '../css/modun/single_hotel';
 @import '../css/modun/recent';
-.my_container{
+@import '../css/modun/mapgoogle';
+
+.my_container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-.text_small{
+
+.text_small {
     color: $text-color;
     font-size: 1.7rem !important;
 }
