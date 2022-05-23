@@ -38,11 +38,12 @@
                 <a href="index.html"><img src="./assets/img/color-default.svg" alt=""></a>
             </div>
             <div class="header-menu">
-                <a href="index.html">Room</a>
+                <a href="index.html">Trang chủ</a>
+                <a href="most.html">Tìm phòng quanh khu vực</a>
             </div>
         </div>
     </header>
-    <div class="container_map">
+    <div class="container_map" id="container">
         <div id="map"></div>
         <div class="result">
             <div class="form">
@@ -50,73 +51,29 @@
                 <button class="btn btn-success" id="search">Search</button>
             </div>
             <div class="result_info">
-                <div class="recent-list" id="root">
-                    <a href="#" class="recent-item shadow">
+                <div class="recent-list " id="root">
+                    <!-- <div class="recent-item shadow">
                         <div class="item_info">
                             <img src="./assets/img/qij6cdhlwescboqpkhaz.webp" alt="">
                             <div class="info">
-                                <p class="name_hotel">Chung cư studio 30 m² </p>
-                                <p class="description">địa chỉ quận 1 tp,hcm địa chỉ quận 1 tp,hcm</p>
+                                <p class="name_hotel">Himalaya Phoenix Dalat Hotel</p>
+                                <div class="rate">
+                                    <div class="rate_scope">
+                                        <p>9.5</p>
+                                    </div>
+                                    <p class="text_small">192 đánh giá</p>
+                                </div>
                                 <p class="text_small">Cách trung tâm 3km</p>
-                                <p class="cost_hotel">5.000.000 vnd</p>
+                                <div class="more">
+                                    <p class="cost_hotel">5.000.000 vnd</p>
+                                    <a href="#" class="more_info">Chi tiết</a>
+                                </div>
                             </div>
                         </div>
-                        <div class="rate">
-                            <p class="label">Very Good</p>
-                            <div class="rate_scope">
-                                <p>9.5</p>
-                            </div>
-                            <p class="text_small">192 đánh giá</p>
-
-                            <h3 class="more_info">Xem thêm</h3>
-                        </div>
-                    </a>
+                    </div> -->
                 </div>
             </div>
         </div>
-    </div>
-    <div class="my_container" id="container">
-        <!-- <div class="slide  mb-5">
-            <img src="./assets/img/image-from-rawpixel-id-1198335-jpeg.jpg" alt="">
-            <div class="slide_input">
-                <div class="input_form">
-                    <p>Nhập địa điểm bạn cần tìm:</p>
-                    <input type="text" onkeyup="checkEmptyInput()" placeholder="Tìm kiếm..." id="input_search">
-                    <button class="btn btn-slide" id="search">Search</button>
-                </div>
-            </div>
-        </div> -->
-
-        <!-- <div class="recent">
-            <p id="result_search"></p>
-            <div class="recent-list" id="root">
-                <a href="#" class="recent-item shadow">
-                    <div class="item_info">
-                        <img src="./assets/img/qij6cdhlwescboqpkhaz.webp" alt="">
-                        <div class="info">
-                            <p class="name_hotel">Chung cư studio 30 m² </p>
-                            <p class="description">địa chỉ quận 1 tp,hcm địa chỉ quận 1 tp,hcm</p>
-                            <p class="text_small">Cách trung tâm 3km</p>
-                            <p class="cost_hotel">5.000.000 vnd</p>
-                        </div>
-                    </div>
-                    <div class="rate">
-                        <p class="label">Very Good</p>
-                        <div class="rate_scope">
-                            <p>9.5</p>
-                        </div>
-                        <p class="text_small">192 đánh giá</p>
-
-                        <h3 class="more_info">Xem thêm</h3>
-                    </div>
-                </a>
-            </div>
-            <div class="paging" style="height: 50px; font-size: 3rem; margin: 0 100px;" id="pagination">
-                <a href="javascript:prevPage()">Prev</a>
-                <p>Page: <span id="page"></span></p>
-                <a href="javascript:nextPage()">Next</a>
-            </div>
-        </div> -->
     </div>
 
     <!-- Bootstrap -->
@@ -129,6 +86,8 @@
         </script>
     <!-- Js distance map -->
     <script src="./assets/js/distance.js"></script>
+    <!-- Js singhotel -->
+    <script src="./assets/js/singleHotel.js"></script>
 </body>
 
 </html>

@@ -9,16 +9,17 @@
 
     .result {
         width: 30%;
+        padding: 20px;
 
         .form {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             align-items: center;
 
             input {
                 width: 70%;
                 height: 35px;
-                margin: 20px;
+                margin: 20px 20px 20px 0;
                 font-size: 1.8rem;
             }
 
@@ -26,6 +27,92 @@
                 width: 100px;
                 height: 40px;
                 font-size: 2rem;
+            }
+        }
+
+        .result_info {
+            width: 100%;
+
+            .recent-item {
+                text-decoration: none;
+                padding: 10px;
+                margin-bottom: 10px;
+
+                .item_info {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .info {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: flex-start;
+                        font-size: 1.8rem;
+                        padding: 0 20px;
+
+                        p {
+                            text-align: start;
+                            margin: 0;
+                            padding: 0;
+                        }
+
+                        .name_hotel {
+                            font-size: 2rem;
+                            font-weight: 700;
+                            color: black;
+                        }
+
+                        .more {
+                            display: flex;
+                            width: 100%;
+                            justify-content: space-between;
+                            align-items: center;
+                            font-size: 2.3rem;
+                        }
+
+                        .cost_hotel {
+                            color: black;
+                        }
+
+                    }
+
+                    img {
+                        width: 150px;
+                        height: 150px;
+                    }
+
+                }
+
+                .rate {
+                    width: 100%;
+                    margin-bottom: 10px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .rate_scope {
+                        font-size: 1.8rem;
+                    }
+
+                    .rate_scope {
+                        width: 40px;
+                        height: 40px;
+                        margin: 5px 0px;
+                        background-color: aquamarine;
+                        border-radius: 5px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: $text-color;
+
+                    }
+
+                    .number_rate {
+                        counter-reset: $text-color;
+                    }
+                }
             }
         }
     }

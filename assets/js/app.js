@@ -11,8 +11,8 @@ const result_max = document.getElementById('result_search');
 async function getAllHouse(callback) {
     const url = "http://localhost:8080/api/house/dalat/all";
     const data = await fetch(url, {
-        mode: 'cors',
-        cache: "force-cache",
+        // mode: 'cors',
+        // cache: "force-cache",
         headers: {
             'Content-Type': 'application/json',
             "Access-Control-Allow-Origin": "*",

@@ -684,14 +684,16 @@ header .header_left .header-menu a:hover {
 
 .container_map .result {
   width: 30%;
+  padding: 20px;
 }
 
 .container_map .result .form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -700,7 +702,7 @@ header .header_left .header-menu a:hover {
 .container_map .result .form input {
   width: 70%;
   height: 35px;
-  margin: 20px;
+  margin: 20px 20px 20px 0;
   font-size: 1.8rem;
 }
 
@@ -708,6 +710,122 @@ header .header_left .header-menu a:hover {
   width: 100px;
   height: 40px;
   font-size: 2rem;
+}
+
+.container_map .result .result_info {
+  width: 100%;
+}
+
+.container_map .result .result_info .recent-item {
+  text-decoration: none;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.container_map .result .result_info .recent-item .item_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container_map .result .result_info .recent-item .item_info .info {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  font-size: 1.8rem;
+  padding: 0 20px;
+}
+
+.container_map .result .result_info .recent-item .item_info .info p {
+  text-align: start;
+  margin: 0;
+  padding: 0;
+}
+
+.container_map .result .result_info .recent-item .item_info .info .name_hotel {
+  font-size: 2rem;
+  font-weight: 700;
+  color: black;
+}
+
+.container_map .result .result_info .recent-item .item_info .info .more {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2.3rem;
+}
+
+.container_map .result .result_info .recent-item .item_info .info .cost_hotel {
+  color: black;
+}
+
+.container_map .result .result_info .recent-item .item_info img {
+  width: 150px;
+  height: 150px;
+}
+
+.container_map .result .result_info .recent-item .rate {
+  width: 100%;
+  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container_map .result .result_info .recent-item .rate .rate_scope {
+  font-size: 1.8rem;
+}
+
+.container_map .result .result_info .recent-item .rate .rate_scope {
+  width: 40px;
+  height: 40px;
+  margin: 5px 0px;
+  background-color: aquamarine;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #636e72;
+}
+
+.container_map .result .result_info .recent-item .rate .number_rate {
+  counter-reset: #636e72;
 }
 
 .my_container {
