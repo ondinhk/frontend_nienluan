@@ -46,16 +46,16 @@
             <img src="./assets/img/image-from-rawpixel-id-1198335-jpeg.jpg" alt="">
             <div class="slide_input">
                 <div class="input_form">
-                    <p>Hiện có <span id="numberHouse"></span> thông tin phòng trên hệ thống:</p>
-                    <input type="text" onkeyup="checkEmptyInput()" placeholder="Tìm kiếm..." id="input_search">
-                    <button class="btn btn-slide" onclick="searchHotel()" id="search">Search</button>
+                    <p>Nhập nội dung cần tìm:</p>
+                    <input type="text" onkeyup="" placeholder="Tìm kiếm..." id="input_search">
+                    <button class="btn btn-slide" onclick="searchContent()" id="search">Search</button>
                 </div>
             </div>
         </div>
         <div class="recent">
             <p id="result_search"></p>
             <div class="recent-list" id="root">
-                <a href="#" class="recent-item shadow">
+                <!-- <a href="#" class="recent-item shadow">
                     <div class="item_info">
                         <img src="./assets/img/qij6cdhlwescboqpkhaz.webp" alt="">
                         <div class="info">
@@ -74,12 +74,7 @@
 
                         <h3 class="more_info">Xem thêm</h3>
                     </div>
-                </a>
-            </div>
-            <div class="paging" style="height: 50px; font-size: 3rem; margin: 0 100px;" id="pagination">
-                <a href="javascript:prevPage()">Prev</a>
-                <p>Page: <span id="page"></span></p>
-                <a href="javascript:nextPage()">Next</a>
+                </a> -->
             </div>
         </div>
     </div>
@@ -88,9 +83,8 @@
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
     <!-- My app -->
-    <script src="./assets/js/search.js"></script>
+    <script src="./assets/js/search_content.js"></script>
     <script src="./assets/js/singleHotel.js"></script>
-    <script src="./assets/js/app.js"></script>
 
 </body>
 

@@ -4,7 +4,6 @@ var state = {
 }
 // DOM const
 const container = document.getElementById('container');
-const input_search = document.getElementById('input_search');
 const result_max = document.getElementById('result_search');
 
 

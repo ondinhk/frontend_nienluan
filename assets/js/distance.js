@@ -4,7 +4,7 @@ function initMap() {
         zoom: 14,
     });
     document.getElementById("search").addEventListener("click", () => {
-        let destination = document.getElementById('destination').value;
+        var destination = document.getElementById('destination').value;
         if (destination === "") {
             alert("Bạn chưa nhập địa chỉ");
             return;
@@ -46,7 +46,7 @@ function getDistance(data_set, destination) {
             origins: address1,
             destinations: [destination],
             travelMode: 'DRIVING',
-        }, endPoint);
+        }, step2);
 
     function step2(response, status) {
         if (status === "OK") {
@@ -104,7 +104,7 @@ function getDistance(data_set, destination) {
     function resultHouse(input) {
         let index_listHouse = [];
         // Lọc lấy 5 index phần tử max
-        while (index_listHouse.length < 5) {
+        while (index_listHouse.length < 4) {
             const max = Math.min(...input);
             const index = input.indexOf(max);
             index_listHouse.push({ "index": index, "distance": max });
@@ -146,15 +146,22 @@ function renderHTML(input) {
             </div>
         </div>`
     });
-    const originList = ["24 Đường Khu Hoà Bình, Đà Lạt, Việt Nam"];
-    const destinationList = ["Chợ đà lạt"];
-
-
+    let list_address = []
+    var destination = document.getElementById('destination').value;
+    input.forEach(element => {
+        list_address.push(element.data.description)
+    });
+    list_address.push(destination)
+    showLocation(list_address)
+    root.innerHTML = html.join("");
+}
+function showLocation(input_address) {
+    console.log(input_address)
+    const originList = input_address;
     var geocoder = new google.maps.Geocoder();
     for (let i = 0; i < originList.length; i++) {
         geocoder.geocode({ address: originList[i] }).then(showGeocodedAddressOnMap);
     }
-    root.innerHTML = html.join("");
 }
 function showGeocodedAddressOnMap(value) {
     console.log(value.results[0])

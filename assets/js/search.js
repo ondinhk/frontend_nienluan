@@ -1,5 +1,10 @@
 function searchHotel() {
-    getAllHouse(filterData)
+    let input_search = document.getElementById('input_search');
+    if (input_search.value.length == 0) {
+        alert("Bạn chưa nhập thông tin")
+    } else {
+        getAllHouse(filterData)
+    }
 }
 function checkEmptyInput() {
     if (input_search.value === "") {
